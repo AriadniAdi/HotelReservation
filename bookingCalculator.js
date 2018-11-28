@@ -16,13 +16,16 @@ class BookingCalculator {
         }
         let hotels = this.hotelRepository.fetchHotels();
         if(hotels.length == 0) {
-            throw Errors.invalidDates() // fix and create tests
+            throw Errors.invalidHotel()
         }
         var cheaperHotel = hotels[0];
-        let cheaperPrice = this.calculatePrice(hotels[0], clientType, dates);;
+        let cheaperPrice = this.calculatePrice(hotels[0], clientType, dates);
         for(var i = 1; i < hotels.length; i++) {
             const currentPrice = this.calculatePrice(hotels[i], clientType, dates);
             if(currentPrice < cheaperPrice) {
+                cheaperHotel = hotels[i];
+                cheaperPrice = currentPrice;
+            } else if(currentPrice === cheaperPrice && cheaperHotel.rating < hotels[i].rating) {
                 cheaperHotel = hotels[i];
                 cheaperPrice = currentPrice;
             }

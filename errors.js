@@ -6,6 +6,10 @@ class Errors {
     static invalidDates() {
         return new Error('invalid date')
     }
+
+    static invalidHotel() {
+        return new Error('invalid Hotel')
+    }
 }
 
 module.exports = Errors;
