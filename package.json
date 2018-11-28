@@ -1,0 +1,19 @@
+{
+  "name": "hotel-reservation",
+  "version": "1.0.0",
+  "description": "Search for miami reservation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AriadniAdi/hotel-reservation.git"
+  },
+  "author": "Ariadni Chioquetta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AriadniAdi/hotel-reservation/issues"
+  },
+  "homepage": "https://github.com/AriadniAdi/hotel-reservation#readme"
+}
