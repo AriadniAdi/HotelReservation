@@ -4,7 +4,7 @@
   "description": "Search for miami reservation",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AriadniAdi/hotel-reservation/issues"
   },
-  "homepage": "https://github.com/AriadniAdi/hotel-reservation#readme"
+  "homepage": "https://github.com/AriadniAdi/hotel-reservation#readme",
+  "dependencies": {
+    "mocha": "^5.2.0"
+  }
 }
