@@ -1,9 +1,9 @@
 class Hotel {
-    constructor(name, rating, regularPrice, rewardPrice) {
+    constructor(name, rating, regular, reward) {
         this.name = name;
         this.rating = rating;
-        this.regularPrice = regularPrice;
-        this.rewardPrice = rewardPrice;
+        this.regular = regular;
+        this.reward = reward;
     }
 }
 
