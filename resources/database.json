@@ -1,37 +1,37 @@
 {
     "hotels":[
        {
-          "name":"LakewoodTest",
+          "name":"Lakewood",
           "rating":3,
           "regular":{
              "weekday":110,
              "weekend":90
           },
-          "reward":{
+          "rewards":{
              "weekday":80,
              "weekend":80
           }
        },
        {
-          "name":"BridgewoodTest",
+          "name":"Bridgewood",
           "rating":4,
           "regular":{
              "weekday":160,
              "weekend":60
           },
-          "reward":{
+          "rewards":{
              "weekday":110,
              "weekend":50
           }
        },
        {
-          "name":"RidgewoodTest",
+          "name":"Ridgewood",
           "rating":5,
           "regular":{
              "weekday":220,
              "weekend":150
           },
-          "reward":{
+          "rewards":{
              "weekday":100,
              "weekend":40
           }

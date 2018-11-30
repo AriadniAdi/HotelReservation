@@ -43,8 +43,8 @@ class BookingCalculator {
     getPrice(hotel, clientType) {
         if(clientType == ClientType.REGULAR) {
             return hotel.regular;
-        } else if (clientType == ClientType.REWARD) {
-            return hotel.reward;
+        } else if (clientType == ClientType.REWARDS) {
+            return hotel.rewards;
         }
     }
 }

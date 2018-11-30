@@ -50,7 +50,7 @@ describe("BookingCalculator", () => {
     context("when not pass a dates", () => {
       it("throws an error", () => {
         assert.throws(() => {
-          this.calculator.cheaperPrice("reward");
+          this.calculator.cheaperPrice("rewards");
         }, Errors.invalidDates());
       });
     });
@@ -134,7 +134,7 @@ describe("BookingCalculator", () => {
         })
       })
     });
-    context("when client type is reward", () => {
+    context("when client type is rewards", () => {
       context("and date is on weekend", () => {
         it("returns the cheaper hotel", () => {
           this.repository.hotels = [
@@ -143,7 +143,7 @@ describe("BookingCalculator", () => {
             new Hotel("C", 8, new ClientTypePrice(80, 90), new ClientTypePrice(80, 120))
           ]
 
-          var result = this.calculator.cheaperPrice(ClientType.REWARD, [weekend()])
+          var result = this.calculator.cheaperPrice(ClientType.REWARDS, [weekend()])
 
           assert.equal(result,"B")
         });
@@ -156,7 +156,7 @@ describe("BookingCalculator", () => {
             new Hotel("C", 8, new ClientTypePrice(80, 90), new ClientTypePrice(10, 120))
           ]
 
-          var result = this.calculator.cheaperPrice(ClientType.REWARD, [weekday()])
+          var result = this.calculator.cheaperPrice(ClientType.REWARDS, [weekday()])
 
           assert.equal(result,"C")
   
@@ -170,7 +170,7 @@ describe("BookingCalculator", () => {
             new Hotel("C", 8, new ClientTypePrice(80, 90), new ClientTypePrice(10, 120))
           ]
 
-          var result = this.calculator.cheaperPrice(ClientType.REWARD, [weekday(),weekend()])
+          var result = this.calculator.cheaperPrice(ClientType.REWARDS, [weekday(),weekend()])
 
           assert.equal(result,"C")
         });
@@ -183,7 +183,7 @@ describe("BookingCalculator", () => {
             new Hotel("C", 8, new ClientTypePrice(200, 180), new ClientTypePrice(60, 120))
           ]
 
-          var result = this.calculator.cheaperPrice(ClientType.REWARD, [weekend(),weekday()])
+          var result = this.calculator.cheaperPrice(ClientType.REWARDS, [weekend(),weekday()])
 
           assert.equal(result,"C")
         })
@@ -196,7 +196,7 @@ describe("BookingCalculator", () => {
             new Hotel("C", 8, new ClientTypePrice(60, 80), new ClientTypePrice(80, 120))
           ]
 
-          var result = this.calculator.cheaperPrice(ClientType.REWARD, [weekday()])
+          var result = this.calculator.cheaperPrice(ClientType.REWARDS, [weekday()])
 
           assert.equal(result,"C")
         })
@@ -209,7 +209,7 @@ describe("BookingCalculator", () => {
             new Hotel("C", 8, new ClientTypePrice(60, 80), new ClientTypePrice(80, 100))
           ]
 
-          var result = this.calculator.cheaperPrice(ClientType.REWARD, [weekend()])
+          var result = this.calculator.cheaperPrice(ClientType.REWARDS, [weekend()])
 
           assert.equal(result,"B")
         })
@@ -223,12 +223,3 @@ describe("BookingCalculator", () => {
     return new Date(2018,11,25)
   }
 });
-
-///empate reward
-///weekend
-///weekday
-///empate regular
-///weekend
-///weekday
-
-// tie of lower value of hotels for regular customer

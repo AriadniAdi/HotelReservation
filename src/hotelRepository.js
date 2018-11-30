@@ -5,7 +5,7 @@ const ClientTypePrice = require('./clientTypePrice');
 const Hotel = require('./hotel');
 
 class HotelRepository {
-    constructor(databasePath = './database.json') {
+    constructor(databasePath = '../resources/database.json') {
         this.databasePath = databasePath;
     }
     fetchHotels() {
@@ -15,8 +15,8 @@ class HotelRepository {
         }
         return data.hotels.map((item) => {
             const regular = new ClientTypePrice(item.regular.weekday, item.regular.weekend)
-            const reward = new ClientTypePrice(item.reward.weekday, item.reward.weekend)
-            return new Hotel(item.name, item.rating, regular, reward)
+            const rewards = new ClientTypePrice(item.rewards.weekday, item.rewards.weekend)
+            return new Hotel(item.name, item.rating, regular, rewards)
         })
     }
 }

@@ -7,7 +7,7 @@
              "weekday":110,
              "weekend":90
           },
-          "reward":{
+          "rewards":{
              "weekday":80,
              "weekend":80
           }
@@ -19,7 +19,7 @@
              "weekday":160,
              "weekend":60
           },
-          "reward":{
+          "rewards":{
              "weekday":110,
              "weekend":50
           }
@@ -31,7 +31,7 @@
              "weekday":220,
              "weekend":150
           },
-          "reward":{
+          "rewards":{
              "weekday":100,
              "weekend":40
           }

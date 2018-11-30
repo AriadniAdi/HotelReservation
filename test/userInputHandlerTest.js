@@ -31,12 +31,12 @@ describe("UserInputHandler", () => {
           assert.equal(inputRegular.clientType, "regular");
         });
       });
-      context("when client type is reward", () => {
-        it("returns a reward client", () => {
+      context("when client type is rewards", () => {
+        it("returns a rewards client", () => {
           var inputReward = this.userInput.extractValues(
-            "reward:16Mar2009(mon)"
+            "rewards:16Mar2009(mon)"
           );
-          assert.equal(inputReward.clientType, "reward");
+          assert.equal(inputReward.clientType, "rewards");
         });
       });
     });
@@ -58,7 +58,7 @@ describe("UserInputHandler", () => {
     describe("valid dates", () => {
       context("and date is valid", () => {
         it("returns a valid date", () => {
-          const result = this.userInput.extractValues("reward:16Mar2009(mon)");
+          const result = this.userInput.extractValues("rewards:16Mar2009(mon)");
           const expectedDate = new Date(2009, 3, 16);
           assert.equal(result.dates[0].year, expectedDate.year);
           assert.equal(result.dates[0].month, expectedDate.month);
