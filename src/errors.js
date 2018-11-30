@@ -1,14 +1,14 @@
 class Errors {
     static invalidClientType() {
-        return new Error('Invalid client')
+        return new Error('Cliente inválido')
     }
 
     static invalidDates() {
-        return new Error('invalid date')
+        return new Error('Data inválida')
     }
 
     static invalidHotel() {
-        return new Error('invalid Hotel')
+        return new Error('Hotel inválido')
     }
 
 }

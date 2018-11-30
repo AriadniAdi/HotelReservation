@@ -11,7 +11,7 @@ class UserInputHandler {
     if (values.length != 2) {
       throw Errors.invalidClientType();
     }
-    const clientType = values[0].trim();
+    const clientType = values[0].trim().toLowerCase();
     if (!ClientType.isValid(clientType)) {
       throw Errors.invalidClientType();
     }

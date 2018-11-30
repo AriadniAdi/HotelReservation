@@ -18,16 +18,16 @@ class App {
             if (data.toLowerCase() == "s\n") {
                 process.exit();
             }
-            console.log("output:" + this.getCheaperHotel(data));
+            this.cheaperHotel(data)
             this.showMenu();
         }.bind(this));
 
     }
 
-    getCheaperHotel(data) {
+    cheaperHotel(data) {
         try {
             let input = this.inputHandler.extractValues(data);
-            return this.calculator.cheaperPrice(input.clientType, input.dates)
+            console.log("output:" + this.calculator.cheaperPrice(input.clientType, input.dates))
         } catch(error) {
             console.log(error.message)
         }
