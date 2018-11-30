@@ -1,4 +1,4 @@
-### HotelReservation
+# HotelReservation
 Sistema de reserva de hotéis para rede de Miami.
 
 ## Funcionalidades:
@@ -16,16 +16,16 @@ Sistema de reserva de hotéis para rede de Miami.
 
 ## Execução
 
-### Requisitos
+## Requisitos
  * Node.js
 ``npm install``
 
-### Configuração ambiente
+## Configuração ambiente
  
 1. No terminal abra a pasta server dentro da raiz do projeto. E execute:
 2. ``npm install`` para instalação dos testes de tdd mocha.
 
-## Para realizar os testes de tdd
+## Para realizar os testes de TDD
 1. No terminal abra a pasta server dentro da raiz do projeto. E execute:
 2. ``npm test``
 
@@ -33,5 +33,5 @@ Sistema de reserva de hotéis para rede de Miami.
 1. No terminal abra a pasta server dentro da raiz do projeto. E execute:
 2. ``node app.js``
 
- ### Se tudo der certo, ao acessar você deve ver a seguinte tela:
+ ## Se tudo der certo, ao acessar você deve ver a seguinte tela:
  ![Screenshot](HotelReservationApp.png)
