@@ -3,7 +3,7 @@ const clientType = {
     REGULAR: 'regular',
 
     isValid: function(type) {
-        return type === this.REWARD || type === this.REGULAR
+        return type.toLowerCase() === this.REWARD || type.toLowerCase() === this.REGULAR
     }
 }
 

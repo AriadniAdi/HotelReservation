@@ -27,9 +27,7 @@ describe("UserInputHandler", () => {
     describe("valid client", () => {
       context("when client type is regular", () => {
         it("returns a regular client", () => {
-          var inputRegular = this.userInput.extractValues(
-            "regular:16Mar2009(mon)"
-          );
+          var inputRegular = this.userInput.extractValues("regular:16Mar2009(mon)");
           assert.equal(inputRegular.clientType, "regular");
         });
       });
@@ -51,21 +49,21 @@ describe("UserInputHandler", () => {
     });
     context("when there is one date with wrong format", () => {
       it("throws an error", () => {
-        assert.equal(() => {
+        assert.throws(() => {
           this.userInput.extractValues("regular:16Mar2009(mon), xxx");
         }, Errors.invalidDates());
       });
     });
   });
-  describe("valid dates", () => {
-    context("and date is valid", () => {
-      it("returns a valid date", () => {
-        const result = this.userInput.extractValues("reward:16Mar2009(mon)");
-        const expectedDate = new Date(2009, 3, 16);
-        assert.equal(result.date.year, expectedDate.year);
-        assert.equal(result.date.month, expectedDate.month);
-        assert.equal(result.date.day, expectedDate.day);
+    describe("valid dates", () => {
+      context("and date is valid", () => {
+        it("returns a valid date", () => {
+          const result = this.userInput.extractValues("reward:16Mar2009(mon)");
+          const expectedDate = new Date(2009, 3, 16);
+          assert.equal(result.dates[0].year, expectedDate.year);
+          assert.equal(result.dates[0].month, expectedDate.month);
+          assert.equal(result.dates[0].day, expectedDate.day);
+        });
       });
     });
-  });
 });
