@@ -1,8 +1,5 @@
 const assert = require("assert");
-const Errors = require("../errors");
-const Hotel = require("../hotel");
 const HotelRepository = require("../hotelRepository");
-const ClientTypePrice = require("../clientTypePrice");
 
 describe("HotelRepository", () => {
 
@@ -42,6 +39,7 @@ describe("HotelRepository", () => {
             assert.equal(ridgewood.regular.weekend, 150)
             assert.equal(ridgewood.reward.weekday, 100)
             assert.equal(ridgewood.reward.weekend, 40)
+
             assert.equal(repository.fetchHotels().length, 3)
         })
       })
