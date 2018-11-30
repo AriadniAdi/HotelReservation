@@ -9,7 +9,7 @@ class BookingCalculator {
     }
 
     cheaperPrice(clientType, dates) {
-        if(clientType == undefined || !ClientType.isValid(clientType)) {
+        if(clientType.constructor !== String || clientType == undefined || !ClientType.isValid(clientType)) {
             throw Errors.invalidClientType();
         } else if (dates === undefined || dates.constructor !== Array) {
             throw Errors.invalidDates()

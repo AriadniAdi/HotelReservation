@@ -1,18 +1,18 @@
 const assert = require("assert");
-const HotelRepository = require("../hotelRepository");
+const HotelRepository = require("../src/hotelRepository");
 
 describe("HotelRepository", () => {
 
   describe("#fetchHotels", () => {
       context("when an invalid json is provided", () => {
         it("returns an empty array", () => {
-            const repository = new HotelRepository('test/resources/invalidHotels.json');
+            const repository = new HotelRepository('../test/resources/invalidHotels.json');
             assert.equal(repository.fetchHotels().length, 0)
         })
       });
       context("when a valid json is provided", () => {
         it("returns hotels", () => {
-            const repository = new HotelRepository('test/resources/validHotels.json');
+            const repository = new HotelRepository('../test/resources/validHotels.json');
             
             const hotels = repository.fetchHotels();
             

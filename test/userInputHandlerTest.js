@@ -1,6 +1,6 @@
 const assert = require("assert");
-const UserInputHandler = require("../userInputHandler");
-const Errors = require("../errors");
+const UserInputHandler = require("../src/userInputHandler");
+const Errors = require("../src/errors");
 
 describe("UserInputHandler", () => {
   beforeEach(() => {

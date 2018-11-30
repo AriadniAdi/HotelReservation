@@ -1,9 +1,9 @@
 const assert = require("assert");
-const BookingCalculator = require("../bookingCalculator");
-const Errors = require("../errors");
-const ClientType = require("../clientType");
-const Hotel = require("../hotel");
-const ClientTypePrice = require("../clientTypePrice");
+const BookingCalculator = require("../src/bookingCalculator");
+const Errors = require("../src/errors");
+const ClientType = require("../src/clientType");
+const Hotel = require("../src/hotel");
+const ClientTypePrice = require("../src/clientTypePrice");
 
 class HotelRepositoryMock {
   constructor() {
@@ -30,6 +30,7 @@ describe("BookingCalculator", () => {
         }, Errors.invalidClientType());
       });
     });
+
     context("when client type is invalid", () => {
       it("throws an error", () => {
         assert.throws(() => {
@@ -37,6 +38,7 @@ describe("BookingCalculator", () => {
         }, Errors.invalidClientType());
       });
     });
+
     context("when hotel is invalid", () => {
       it("throws an error", () => {
         this.repository.hotels = []
